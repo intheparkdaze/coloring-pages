@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In The Park Daze — Free Coloring Pages</title>
+<meta name="description" content="Free printable coloring pages from In The Park Daze — grab your crayons and color your own trip to the parks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2A1B3D;
+    --ink-soft:#4A3766;
+    --paper:#FBF3E7;
+    --paper-deep:#F3E6D3;
+    --dusk:#241531;
+    --dusk-deep:#160D1F;
+    --gold:#F2B84B;
+    --gold-deep:#D89A2E;
+    --coral:#F0653E;
+    --magenta:#D94F80;
+    --line:#E4D3B8;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Nunito', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Baloo 2', sans-serif;
+    margin:0;
+  }
+  .script{
+    font-family:'Sacramento', cursive;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0.7rem 1.5rem;
+    background:rgba(22,13,31,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(242,184,75,0.25);
+  }
+  .brand{display:flex; align-items:center; gap:0.65rem;}
+  .brand img{width:42px; height:42px; border-radius:50%; box-shadow:0 0 0 2px var(--gold);}
+  .brand span{
+    color:var(--paper); font-weight:700; font-size:1.05rem; letter-spacing:0.02em;
+  }
+  .header-link{
+    font-size:0.85rem; font-weight:700; color:var(--gold);
+    text-decoration:none; border:1.5px solid var(--gold); border-radius:999px;
+    padding:0.4rem 0.9rem; transition:background 0.2s, color 0.2s;
+    white-space:nowrap;
+  }
+  .header-link:hover{background:var(--gold); color:var(--dusk-deep);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+    background-image:url('assets/hero-banner.png');
+    background-size:cover; background-position:center;
+    text-align:center;
+    padding:2.5rem 1.5rem 4rem;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(22,13,31,0.05) 0%, rgba(22,13,31,0.55) 65%, rgba(22,13,31,0.92) 100%);
+  }
+  .hero-content{position:relative; z-index:2; max-width:640px;}
+  .eyebrow{
+    color:var(--gold);
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-size:0.78rem;
+    margin-bottom:0.9rem;
+  }
+  .hero h1{
+    color:var(--paper);
+    font-size:clamp(2rem, 5vw, 3rem);
+    line-height:1.15;
+    text-shadow:0 2px 18px rgba(0,0,0,0.4);
+  }
+  .hero h1 .script{
+    display:block;
+    font-size:1.5em;
+    color:var(--gold);
+    line-height:1;
+    margin-top:0.15em;
+  }
+  .hero p{
+    color:#EBDFF2;
+    font-size:1.05rem;
+    margin:1.1rem auto 1.6rem;
+    max-width:480px;
+  }
+  .hero-cta{
+    display:inline-block;
+    background:var(--coral);
+    color:var(--paper);
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    text-decoration:none;
+    padding:0.85rem 1.8rem;
+    border-radius:999px;
+    box-shadow:0 8px 22px rgba(240,101,62,0.4);
+    transition:transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta:hover{transform:translateY(-2px); box-shadow:0 10px 26px rgba(240,101,62,0.5);}
+
+  /* ---------- String lights divider (signature element) ---------- */
+  .lights{
+    position:relative;
+    height:46px;
+    margin:0 auto;
+    max-width:1000px;
+  }
+  .lights svg{width:100%; height:100%; display:block;}
+  .bulb{ animation:twinkle 2.6s ease-in-out infinite; }
+  .bulb:nth-child(odd){ animation-delay:0.6s; }
+  .bulb:nth-child(3n){ animation-delay:1.2s; }
+  @keyframes twinkle{
+    0%,100%{opacity:1;}
+    50%{opacity:0.45;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .bulb{animation:none;}
+  }
+
+  /* ---------- Intro ---------- */
+  .intro{
+    max-width:680px;
+    margin:0 auto;
+    text-align:center;
+    padding:2.8rem 1.5rem 1rem;
+  }
+  .intro h2{
+    font-size:1.9rem;
+    color:var(--ink);
+  }
+  .intro h2 .script{color:var(--coral); font-size:1.2em;}
+  .intro p{
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    line-height:1.6;
+    margin-top:0.9rem;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery{
+    max-width:1100px;
+    margin:2.5rem auto 4rem;
+    padding:0 1.5rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:2rem;
+  }
+
+  .ticket{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 26px rgba(42,27,61,0.12);
+    display:flex;
+    flex-direction:column;
+    border:1px solid var(--line);
+  }
+  .ticket-art{
+    aspect-ratio:4/5;
+    overflow:hidden;
+    background:var(--paper-deep);
+    border-bottom:2px dashed var(--gold-deep);
+  }
+  .ticket-art img{width:100%; height:100%; object-fit:cover;}
+  .ticket-body{
+    padding:1.1rem 1.2rem 1.4rem;
+    display:flex; flex-direction:column; flex:1;
+  }
+  .ticket-title{
+    font-size:1.15rem;
+    color:var(--ink);
+    margin-bottom:0.35rem;
+  }
+  .ticket-desc{
+    color:var(--ink-soft);
+    font-size:0.92rem;
+    line-height:1.5;
+    flex:1;
+    margin-bottom:1.1rem;
+  }
+  .ticket-stub{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border:1.5px dashed var(--gold-deep);
+    border-radius:10px;
+    padding:0.55rem 0.9rem;
+    background:linear-gradient(90deg, rgba(242,184,75,0.12), rgba(240,101,62,0.08));
+  }
+  .ticket-stub::before, .ticket-stub::after{
+    content:"";
+    position:absolute;
+    width:14px; height:14px;
+    background:#fff;
+    border:1.5px dashed var(--gold-deep);
+    border-radius:50%;
+    top:50%; transform:translateY(-50%);
+  }
+  .ticket-stub::before{ left:-8px; }
+  .ticket-stub::after{ right:-8px; }
+  .stub-label{
+    font-family:'Baloo 2', sans-serif;
+    font-size:0.68rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+  }
+  .stub-btn{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:0.88rem;
+    color:var(--dusk-deep);
+    background:var(--gold);
+    text-decoration:none;
+    padding:0.4rem 0.85rem;
+    border-radius:7px;
+    transition:background 0.2s;
+  }
+  .stub-btn:hover{background:var(--gold-deep); color:#fff;}
+
+  /* Coming soon card */
+  .ticket.coming-soon .ticket-art{
+    display:flex; align-items:center; justify-content:center;
+    background:repeating-linear-gradient(135deg, var(--paper-deep), var(--paper-deep) 10px, #EFE0C8 10px, #EFE0C8 20px);
+  }
+  .coming-soon-badge{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    color:var(--ink-soft);
+    background:#fff;
+    border:2px dashed var(--gold-deep);
+    border-radius:999px;
+    padding:0.4rem 1rem;
+    font-size:0.85rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--dusk-deep);
+    color:#D9C9E8;
+    padding:2.6rem 1.5rem 2rem;
+    text-align:center;
+  }
+  footer .brand-line{
+    display:flex; align-items:center; justify-content:center; gap:0.6rem;
+    margin-bottom:1rem;
+  }
+  footer .brand-line img{width:34px; height:34px; border-radius:50%;}
+  footer .brand-line span{
+    font-family:'Sacramento', cursive;
+    font-size:1.6rem;
+    color:var(--gold);
+  }
+  .social-row{
+    display:flex; flex-wrap:wrap; gap:0.6rem 1rem;
+    justify-content:center;
+    margin-bottom:1.4rem;
+  }
+  .social-row a{
+    font-size:0.85rem;
+    font-weight:700;
+    color:var(--paper);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:border-color 0.2s, color 0.2s;
+  }
+  .social-row a:hover{color:var(--gold); border-color:var(--gold);}
+  footer .fine-print{
+    font-size:0.78rem;
+    color:#8A76A3;
+    max-width:520px;
+    margin:0 auto;
+    line-height:1.6;
+  }
+
+  :focus-visible{
+    outline:3px solid var(--coral);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="In The Park Daze logo">
+      <span>In The Park Daze</span>
+    </div>
+    <a class="header-link" href="https://linktr.ee/InTheParkDaze" target="_blank" rel="noopener">All Our Links</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Free Printable Fun</div>
+      <h1>Color Your Own<span class="script">Park Daze</span></h1>
+      <p>Grab your crayons — these free coloring pages are inspired by our trips, our characters, and a whole lot of park magic. Print as many as you'd like, no strings attached.</p>
+      <a class="hero-cta" href="#gallery">Grab a Page ↓</a>
+    </div>
+  </section>
+
+  <div class="lights" aria-hidden="true">
+    <svg viewBox="0 0 1000 46" preserveAspectRatio="none">
+      <path d="M0,6 Q250,46 500,6 Q750,-30 1000,6" fill="none" stroke="#D89A2E" stroke-width="2" opacity="0.55"/>
+      <g>
+        <!-- bulbs distributed along the curve -->
+        <circle class="bulb" cx="30" cy="9" r="6" fill="#F2B84B"/>
+        <circle class="bulb" cx="110" cy="20" r="6" fill="#F0653E"/>
+        <circle class="bulb" cx="190" cy="28" r="6" fill="#D94F80"/>
+        <circle class="bulb" cx="270" cy="31" r="6" fill="#F2B84B"/>
+        <circle class="bulb" cx="350" cy="28" r="6" fill="#F0653E"/>
+        <circle class="bulb" cx="430" cy="20" r="6" fill="#D94F80"/>
+        <circle class="bulb" cx="500" cy="14" r="6" fill="#F2B84B"/>
+        <circle class="bulb" cx="570" cy="8" r="6" fill="#F0653E"/>
+        <circle class="bulb" cx="650" cy="4" r="6" fill="#D94F80"/>
+        <circle class="bulb" cx="730" cy="2" r="6" fill="#F2B84B"/>
+        <circle class="bulb" cx="810" cy="4" r="6" fill="#F0653E"/>
+        <circle class="bulb" cx="890" cy="8" r="6" fill="#D94F80"/>
+        <circle class="bulb" cx="965" cy="14" r="6" fill="#F2B84B"/>
+      </g>
+    </svg>
+  </div>
+
+  <section class="intro">
+    <h2>Fresh from <span class="script">our park days</span> to your kitchen table</h2>
+    <p>Every page here started as a real moment from our trips — turned into line art you can bring to life however you like. New pages get added throughout the year, so check back often.</p>
+  </section>
+
+  <section class="gallery" id="gallery">
+
+    <article class="ticket">
+      <div class="ticket-art">
+        <img src="assets/preview-safari.png" alt="Coloring page preview: Michael and Laura on a safari-style ride, wearing pith helmets">
+      </div>
+      <div class="ticket-body">
+        <h3 class="ticket-title">Safari Selfie</h3>
+        <p class="ticket-desc">A jungle trek selfie, pith helmets and all. One of our favorite ride-day moments, ready for your colors.</p>
+        <div class="ticket-stub">
+          <span class="stub-label">Admit One · Free</span>
+          <a class="stub-btn" href="assets/coloring-safari-selfie.pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="ticket coming-soon">
+      <div class="ticket-art">
+        <span class="coming-soon-badge">Coming Soon</span>
+      </div>
+      <div class="ticket-body">
+        <h3 class="ticket-title">More Pages on the Way</h3>
+        <p class="ticket-desc">We're adding new coloring pages regularly. Follow along on our socials so you don't miss the next drop.</p>
+        <div class="ticket-stub">
+          <span class="stub-label">Check back soon</span>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <footer>
+    <div class="brand-line">
+      <img src="assets/logo.png" alt="">
+      <span>In The Park Daze</span>
+    </div>
+    <div class="social-row">
+      <a href="https://youtube.com/@InTheParkDaze" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://instagram.com/InTheParkDaze" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/InTheParkDaze" target="_blank" rel="noopener">X</a>
+      <a href="https://facebook.com/InTheParkDaze" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://theparkdaze.tv" target="_blank" rel="noopener">Twitch</a>
+    </div>
+    <p class="fine-print">Free for personal, non-commercial use. Print and color as many copies as you'd like for your family — please don't resell or redistribute these pages elsewhere. Made with love by Michael &amp; Laura.</p>
+  </footer>
+
+</body>
+</html>
